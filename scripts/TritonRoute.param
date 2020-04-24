@@ -1,0 +1,8 @@
+lef:./results/merged.lef
+def:./results/global_route.def
+guide:./results/route.guide
+output:./results/detail_route.def
+outputDRC:./reports/tr_drc.rpt
+outputMaze:./log/maze.log
+verbose:1
+timeout:2400
