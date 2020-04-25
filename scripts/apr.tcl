@@ -27,7 +27,7 @@ set_wire_rc -layer "metal3"
 # ------------------------------------------------------------------------------
 # STEP 1: Floorplan
 # ------------------------------------------------------------------------------
-initialize_floorplan -utilization 10.0 \
+initialize_floorplan -utilization 24.0 \
                      -aspect_ratio 1.0 \
                      -core_space 2.0 \
                      -tracks "./tech/tracks.info" \
@@ -63,17 +63,17 @@ log_end
 io_placer -hor_layer 3 -ver_layer 2 -random
 
 # Timing Driven Mixed Size Placement
-global_placement -timing_driven -density 0.20
+global_placement -timing_driven -density 0.50
 
 # Macro Placement
 macro_placement -global_config ./tech/IP_global.cfg
 
-# Well-tie and tap-cell insertion
+# Well-tie and tap-cell insertion (Using filler cells as dummies)
 tapcell -endcap_cpp "2" -distance 120  \
         -tapcell_master "FILLCELL_X1" -endcap_master "FILLCELL_X1"
 
 # Well-tie and tap-cell insertion
-pdngen ./tech/grid_strategy-M1-M2-M7.cfg -verbose
+pdngen ./tech/pdn.cfg -verbose
 
 # ------------------------------------------------------------------------------
 # STEP 2: Placement, Resizing and Repairs

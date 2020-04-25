@@ -51,7 +51,7 @@
    <produce-routing>true</produce-routing>
    <routing-suffix/>
    <routing-datatype>0</routing-datatype>
-   <lef-files>/net/trenton/x/ajayi/projects/OpenROAD/OpenROAD-example/tech/NangateOpenCellLibrary.tech.lef</lef-files> <lef-files>/net/trenton/x/ajayi/projects/OpenROAD/OpenROAD-example/tech/NangateOpenCellLibrary.macro.rect.lef</lef-files> <lef-files>/net/trenton/x/ajayi/projects/OpenROAD/OpenROAD-example/src/fakeram45_1024x32.lef</lef-files> <lef-files>/net/trenton/x/ajayi/projects/OpenROAD/OpenROAD-example/src/fakeram45_64x32.lef</lef-files>
+   <lef-files></lef-files>
   </lefdef>
   <dxf>
    <dbu>0.0001</dbu>
